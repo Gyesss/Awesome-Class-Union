@@ -1,0 +1,171 @@
+.collapsible {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    margin: 5em auto;
+    padding: 1em;
+    width: fit-content;
+    background-color: white;
+    box-shadow: 0 0 .3em .1em gray;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+}
+
+.collapsible:hover {
+    background: linear-gradient(to top, blueviolet, deepskyblue);
+}
+
+.collapsible:hover h1 {
+    background: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 3em 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: none;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.profile-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 90%;
+    height: fit-content;
+    margin: .3em 0;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 0 .3em .1em gray;
+}
+
+.profile-box h2 {
+    order: 1;
+    color: gray;
+}
+
+.profile-box img {
+    margin-right: 0 auto;
+    width: 100px;
+}
+
+.bio-overflow {
+    overflow: auto;
+    height: 5em;
+}
+
+.bio-overflow::-webkit-scrollbar {
+    width: 3px;
+}
+
+.bio-overflow::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.bio-overflow::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+    border-radius: 25px;
+}
+
+.bio {
+    margin-bottom: 1em;
+}
+
+.quote {
+    display: none;
+    color: gray !important;
+    font-size: .8em;
+}
+
+.absence {
+    display: flex;
+    gap: 1em;
+}
+
+.out {
+    flex-direction: column !important;
+    gap: 1em;
+    height: 10em !important;
+    background-color: red;
+    color: white;
+}
+
+.out h2 {
+    color: white !important;
+}
+
+.fa-mars {
+    color: deepskyblue;
+}
+
+.fa-venus {
+    color: deeppink;
+}
+
+/* Mobile Mode */
+
+@media only screen and (min-width: 400px) {
+    .profile-wrap {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .profile-box {
+        width: 40%;
+    }
+}
+
+/* Tablet Mode */
+
+@media only screen and (min-width: 600px) {
+    .profile-wrap {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .profile-box {
+        width: 45%;
+    }
+
+    .profile-box h2 {
+        order: -1;
+        color: gray;
+    }
+
+    .profile-box .bio, .profile-box .quote {
+        display: block;
+    }
+
+    .content {
+        display: none;
+        overflow: hidden;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: transparent;
+    }
+}
+
+/* Desktop Mode */
+
+@media only screen and (min-width: 1000px) {
+    .profile-box {
+        width: 30%;
+    }
+}
